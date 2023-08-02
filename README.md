@@ -16,23 +16,19 @@ The Image Manipulation API is a Laravel application that provides a fast and sec
 ![create-sanctum-access-token](https://github.com/AhmedYahyaE/laravel-image-manipulation-api/assets/118033266/0ab56da1-4666-40f9-b94c-e24690498560)
 
 ## Features:
-1- Using a Scope Filter (Query Scopes) for both the Search Bar Form and Website Tags implementation.
+1- Token-based Authentication using Laravel Sanctum package.
 
-2- Using Blade Components and Component Slots.
+2- Using Laravel API Resources and Resource Collection classes.
 
-3- Using Database Seeders and Model Factories.
+3- Using Form Request classes for complex validation.
 
-4 - Using Laravel's '[storage](storage)' directory (public disk and local driver) for storing user-uploaded images (instead of the regular '[public](public)' directory). Then, using a Symbolic Link between the '[storage/app/public](storage/app/public)' directory and '[public/storage](public/storage)' directory to display images throughout the application.
+4- Rate Limiting to restrict the number of requests to the API per minute.
 
-5- Using Route Model Binding.
+5- Using Regular Expression with the resizing API endpoints.
 
-6- Using Alpine.js library for creating Session Flash Messages that disappears after a specified duration.
+6- Laravel Breeze package.
 
-7- Using Tailwind CSS for creating a completely responsive/mobile first design.
-
-8- Eloquent Pagination.
-
-9-  User Registration, Authentication and Authorization.
+7- Intervention Image package for image manipulation.
 
 ## Application Routes:
 All the application routes are defined in the [web.php](/routes/web.php) file.
