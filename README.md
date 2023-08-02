@@ -31,7 +31,7 @@ The Image Manipulation API is a Laravel application that provides a fast and sec
 7- Intervention Image package for image manipulation.
 
 ## Application Routes:
-All the application routes and API Endpoints are defined in both ***[web.php](routes/web.php)*** and ***[api.php](routes/api.php)*** files.
+All the application routes and API Endpoints are defined in both ***[web.php](routes/web.php)*** (registration and login routes to get an acess token) and ***[api.php](routes/api.php)*** (API endpoints) files.
 
 ## Installation & Configuration:
 
