@@ -30,6 +30,8 @@ The Image Manipulation API is a Laravel application that provides a fast and sec
 
 7- Intervention Image package for image manipulation.
 
+8- Route Model Binding.
+
 ## Application Routes:
 All the application routes and API Endpoints are defined in both ***[web.php](routes/web.php)*** (registration and login routes to get an acess token) and ***[api.php](routes/api.php)*** (API endpoints) files.
 
@@ -41,7 +43,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 3- Run the '***npm install***' command (and only in case you face any issues/errors, run the 'npm audit fix' command), and then run the '***npm run build***' command.
 
-4- Create a MySQL database named **\`yourjob\`**, then import the **[yourjob database SQL Dump File](<Database - yourjob/yourjob database - SQL Dump File - phpMyAdmin Export.sql>)** into your \`yourjob\` database.
+4- Create a MySQL database named **\`image_manipulation_api\`**, then import the **[image_manipulation_api database SQL Dump File](<Database - yourjob/image_manipulation_api database - SQL Dump File - phpMyAdmin Export.sql>)** into your \`image_manipulation_api\` database.
 
 5- Navigate to the **[.env](.env)** file and configure/update it with your MySQL database credentials and other configuration settings.
 
