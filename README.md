@@ -50,11 +50,19 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 7- Run the '***php artisan serve***' command, and then open your browser and visit **http://127.0.0.1:8000** to access YourJob application.
 
 \*\* Ready-to-use registered accounts credentials you can use to log in:
-> Email: **test@test.com**, Password: **123456**
+> Email: **ahmed.yahya@example.com**, Password: **123456**
 
-> Email: **yasser@gmail.com**, Password: **123456**
-    
-> Email: **test2@test.com**, Password: **123456**
+## API Endpoints:
+> ***\*\* Check the API Collection on my Postman Profile: https://www.postman.com/ahmed-yahya/workspace/my-public-portfolio-postman-workspace/collection/28181483-12ef8a00-7826-4bc6-b57a-016f48546432***
+
+> ***\*\* Also, you can test the API Endpoints using Postman. Here is the API's Postman Collection .json file [Postman Collection file](<Postman Collection of API Endpoints/Image Manipulation API (Laravel).postman_collection.json>) you can download and import in your Postman.***
+
+**1- Register/Sign up/Create a new user (POST):**
+
+**POST /v1/users**
+
+- "Content-Type" HTTP Request Header must be set to "application/".
+
 
 ## Contribution:
-Contributions to my YourJob Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
+Contributions to my Image Manipulation API Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
