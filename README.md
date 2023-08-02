@@ -1,66 +1,64 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Image Manipulation API - Laravel Application
+The Image Manipulation API is a Laravel application that provides a fast and secure way to resize images based on user-defined dimensions. This API utilizes Laravel's Sanctum authentication to ensure secure access to its features. Users can send an image to the API, along with the desired dimensions (width and height), and receive the resized image in return.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Screenshots:
+### Image Manipulation API Collection on my Postman profile:
+![image-manipulation-api-my-postman-profile](https://github.com/AhmedYahyaE/laravel-image-manipulation-api/assets/118033266/29091773-ac8f-4d6a-abf0-a6800f3e7e74)
 
-## About Laravel
+### Database design:
+![image_manipulation_api database design](https://github.com/AhmedYahyaE/laravel-image-manipulation-api/assets/118033266/e7210e63-fa4b-4fc1-8698-a466363c7697)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Creating an account to generate a Sanctum Access Token:
+![image-manipulation-api-homepage](https://github.com/AhmedYahyaE/laravel-image-manipulation-api/assets/118033266/4b506229-e862-48da-938b-38b65911aa8d)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![sanctum-access-tokens](https://github.com/AhmedYahyaE/laravel-image-manipulation-api/assets/118033266/614974ed-5cff-4f8f-bc6e-1c70388c5fa6)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![create-sanctum-access-token](https://github.com/AhmedYahyaE/laravel-image-manipulation-api/assets/118033266/0ab56da1-4666-40f9-b94c-e24690498560)
 
-## Learning Laravel
+## Features:
+1- Using a Scope Filter (Query Scopes) for both the Search Bar Form and Website Tags implementation.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2- Using Blade Components and Component Slots.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+3- Using Database Seeders and Model Factories.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+4 - Using Laravel's '[storage](storage)' directory (public disk and local driver) for storing user-uploaded images (instead of the regular '[public](public)' directory). Then, using a Symbolic Link between the '[storage/app/public](storage/app/public)' directory and '[public/storage](public/storage)' directory to display images throughout the application.
 
-## Laravel Sponsors
+5- Using Route Model Binding.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+6- Using Alpine.js library for creating Session Flash Messages that disappears after a specified duration.
 
-### Premium Partners
+7- Using Tailwind CSS for creating a completely responsive/mobile first design.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+8- Eloquent Pagination.
 
-## Contributing
+9-  User Registration, Authentication and Authorization.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Application Routes:
+All the application routes are defined in the [web.php](/routes/web.php) file.
 
-## Code of Conduct
+## Installation & Configuration:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1- Open your terminal, and use the '***git clone https://github.com/AhmedYahyaE/laravel-job-search-app.git***' command, or just download the ZIP project.
 
-## Security Vulnerabilities
+2- Navigate/Change into (using the **cd** command) to the project root directory, then run the '***composer install***' command.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3- Run the '***npm install***' command (and only in case you face any issues/errors, run the 'npm audit fix' command), and then run the '***npm run build***' command.
 
-## License
+4- Create a MySQL database named **\`yourjob\`**, then import the **[yourjob database SQL Dump File](<Database - yourjob/yourjob database - SQL Dump File - phpMyAdmin Export.sql>)** into your \`yourjob\` database.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5- Navigate to the **[.env](.env)** file and configure/update it with your MySQL database credentials and other configuration settings.
+
+6- In case the application images are broken (are not loaded), recreate the Symbolic Link between the '[storage/app/public](storage/app/public)' directory and '[public/storage](public/storage)' directory by removing/deleting the [public/storage](public/storage) directory first, then run the '***php artisan storage:link***' command.
+
+7- Run the '***php artisan serve***' command, and then open your browser and visit **http://127.0.0.1:8000** to access YourJob application.
+
+\*\* Ready-to-use registered accounts credentials you can use to log in:
+> Email: **test@test.com**, Password: **123456**
+
+> Email: **yasser@gmail.com**, Password: **123456**
+    
+> Email: **test2@test.com**, Password: **123456**
+
+## Contribution:
+Contributions to my YourJob Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
