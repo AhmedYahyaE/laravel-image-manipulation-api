@@ -135,7 +135,7 @@ Example: POST /api/v1/image/resize?w=50%&h=70%
 
 - 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
 - "image" key with the value of the URL/link of your image must be provided in your JSON HTTP Request body.
-- "album_id" key with the value of the album ID that you want to associate your image with can be optionally (not required) provided in your request's JSON body.
+- "album_id" key with the value of the album ID that you want to associate your image with can be optionally (not required) provided in your JSON HTTP Request body.
 
 **11- Resize an image By URL with px (POST):**
 
@@ -145,7 +145,7 @@ Example: POST /api/v1/image/resize?w=100&h=120
 
 - 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
 - "image" key with the value of the URL/link of your image must be provided in your JSON HTTP Request body.
-- "album_id" key with the value of the album ID that you want to associate your image with can be optionally (not required) provided in your request's JSON body.
+- "album_id" key with the value of the album ID that you want to associate your image with can be optionally (not required) provided in your JSON HTTP Request body.
 
 **12- Resize an image By Upload with percentages % (POST):**
 
