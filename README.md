@@ -60,26 +60,33 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 10- In your request, go to 'Headers', add two headers: 'Accept': 'application/json' and 'Content-Type': 'application/json'.
 
-## Note:
-
-> For ***ALL*** your requests to the Image Manipulation API, you must add the following three Headers:
-> 
-> a- 'Authorization' Header with the value of the Access Token you've obtained when you registered your account.
->
-> b- 'Accept' Header with the value of 'application/json'.
->
-> c- 'Content-Type' Header with the value of 'application/json'.
-
-## API Endpoints:
 > ***\*\* Check the API Collection on my Postman Profile: https://www.postman.com/ahmed-yahya/workspace/my-public-portfolio-postman-workspace/collection/28181483-12ef8a00-7826-4bc6-b57a-016f48546432***
 
 > ***\*\* Also, you can test the API Endpoints using Postman. Here is the API's Postman Collection .json file [Postman Collection file](<Postman Collection of API Endpoints/Image Manipulation API (Laravel).postman_collection.json>) you can download and import in your Postman.***
 
-**1- Register/Sign up/Create a new user (POST):**
+## Note:
 
-**POST /v1/users**
+> For **ALL** your requests to the Image Manipulation API, you must add the following three Headers:
+> 
+>     a- 'Authorization' Header with the value of the Access Token you've obtained when you registered your account.
+>
+>     b- 'Accept' Header with the value of 'application/json'.
+>
+>     c- 'Content-Type' Header with the value of 'application/json'.
 
-- "Content-Type" HTTP Request Header must be set to "application/".
+## API Endpoints:
+
+**1- Create an album (POST):**
+
+**POST /api/v1/album**
+
+- "name" key which is your album name in your request's JSON body must be provided.
+
+**1- Create an album (POST):**
+
+**POST /api/v1/album**
+
+- "name" key which is your album name in your request's JSON body must be provided.
 
 
 ## Contribution:
