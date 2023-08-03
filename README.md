@@ -54,6 +54,14 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 \*\* Ready-to-use registered accounts credentials you can use to log in:
 > Email: **ahmed.yahya@example.com**, Password: **123456**
 
+8- Open your HTTP Client such as Postman, create a new Collection, name it 'Image Manipulation API'. Click on your Imgae Manipulation API Collection, then go to 'Variables' tab, then create a variable with the value of the Access Token that you've copied when you registered your account, then click 'Save'. Go to 'Authorization' tab, the in the 'Type' drop-down menu, choose 'Bearer Token'. This way you can inherit this Access token in All your requests to the API in this Collection.
+
+9- Add your first request, then go to 'Authorization' tab, click on 'Inherit auth from parent'.
+
+10- In your request, go to 'Headers', add two headers: 'Accept': 'application/json' and 'Content-Type': 'application/json'.
+
+*Note: 
+
 ## API Endpoints:
 > ***\*\* Check the API Collection on my Postman Profile: https://www.postman.com/ahmed-yahya/workspace/my-public-portfolio-postman-workspace/collection/28181483-12ef8a00-7826-4bc6-b57a-016f48546432***
 
