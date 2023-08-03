@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "12ef8a00-7826-4bc6-b57a-016f48546432",
-		"name": "Image Manipulation API (Laravel)",
+		"name": "Image Manipulation API (Laravel application)",
 		"description": "The Image Manipulation REST API is a Laravel application that provides a fast and secure way to resize images based on user-defined dimensions. This API utilizes Laravel's Sanctum authentication to ensure secure access to its features. Users can send an image to the API, along with the desired dimensions (width and height), and receive the resized image in return.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28181483",
