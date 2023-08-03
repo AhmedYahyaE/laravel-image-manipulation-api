@@ -86,6 +86,40 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 **GET /api/v1/album**
 
+**3- Get a Single album By ID (that belongs to the authenticated/logged-in user) (GET):**
+
+**GET /api/v1/album/{album_id}**
+
+- {album_id} must be provided in the URL.
+
+**4- Update an album (that belongs to the authenticated/logged-in user) (PUT):**
+
+**PUT /api/v1/album/{album_id}**
+
+- {album_id} must be provided in the URL.
+- "name" key, which is your updated album name, must be provided in your request's JSON body.
+
+**5- Delete an album (that belongs to the authenticated/logged-in user) (DELETE):**
+
+**DELETE /api/v1/album/{album_id}**
+
+- {album_id} must be provided in the URL.
+
+**6- Get All images (that ONLY belong to the authenticated/logged-in user) (GET):**
+
+**GET /api/v1/image**
+
+**7- Get a Single image By ID (that belongs to the authenticated/logged-in user) (GET):**
+
+**GET /api/v1/image/{image_id}**
+
+- {image_id} must be provided in the URL.
+
+**8- Get images By Album (that belong to the authenticated/logged-in user) (GET):**
+
+**GET /api/v1/image/by-album/{album_id}**
+
+- {album_id} must be provided in the URL.
 
 ## Contribution:
 Contributions to my Image Manipulation API Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
