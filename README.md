@@ -80,7 +80,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 **POST /api/v1/album**
 
-- "name" key, which is your album name, must be provided in your request's JSON body.
+- "name" key, which is your album name, must be provided in your JSON HTTP Request body.
 
 **2- Get all albums (that ONLY belong to the authenticated/logged-in user) (GET):**
 
@@ -97,7 +97,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 **PUT /api/v1/album/{album_id}**
 
 - {album_id} must be provided in the URL.
-- "name" key, which is your updated album name, must be provided in your request's JSON body.
+- "name" key, which is your updated album name, must be provided in your JSON HTTP Request body.
 
 **5- Delete an album (that belongs to the authenticated/logged-in user) (DELETE):**
 
@@ -134,7 +134,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 Example: POST /api/v1/image/resize?w=50%&h=70%
 
 - 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
-- "image" key with the value of the URL/link of your image must be provided in your request's JSON body.
+- "image" key with the value of the URL/link of your image must be provided in your JSON HTTP Request body.
 - "album_id" key with the value of the album ID that you want to associate your image with can be optionally (not required) provided in your request's JSON body.
 
 **11- Resize an image By URL with px (POST):**
@@ -144,7 +144,7 @@ Example: POST /api/v1/image/resize?w=50%&h=70%
 Example: POST /api/v1/image/resize?w=100&h=120
 
 - 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
-- "image" key with the value of the URL/link of your image must be provided in your request's JSON body.
+- "image" key with the value of the URL/link of your image must be provided in your JSON HTTP Request body.
 - "album_id" key with the value of the album ID that you want to associate your image with can be optionally (not required) provided in your request's JSON body.
 
 **12- Resize an image By Upload with percentages % (POST):**
