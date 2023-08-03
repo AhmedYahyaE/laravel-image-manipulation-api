@@ -1,5 +1,5 @@
 # Image Manipulation API - Laravel Application
-The Image Manipulation RESTful API is a Laravel application that provides a fast and secure way to resize images based on user-defined dimensions. This API utilizes Laravel's Sanctum authentication to ensure secure access to its features. Users can send an image to the API, along with the desired dimensions (width and height), and receive the resized image in return.
+The Image Manipulation REST API is a Laravel application that provides a fast and secure way to resize images based on user-defined dimensions. This API utilizes Laravel's Sanctum authentication to ensure secure access to its features. Users can send an image to the API, along with the desired dimensions (width and height), and receive the resized image in return.
 
 ## Screenshots:
 ### Image Manipulation API Collection on my Postman profile:
