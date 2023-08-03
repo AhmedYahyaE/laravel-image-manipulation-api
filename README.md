@@ -80,13 +80,11 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 **POST /api/v1/album**
 
-- "name" key which is your album name in your request's JSON body must be provided.
+- "name" key, which is your album name, must be provided in your request's JSON body.
 
-**1- Create an album (POST):**
+**2- Get all albums (that ONLY belong to the authenticated/logged-in user) (GET):**
 
-**POST /api/v1/album**
-
-- "name" key which is your album name in your request's JSON body must be provided.
+**GET /api/v1/album**
 
 
 ## Contribution:
