@@ -62,7 +62,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 > ***\*\* Check the API Collection on my Postman Profile: https://www.postman.com/ahmed-yahya/workspace/my-public-portfolio-postman-workspace/collection/28181483-12ef8a00-7826-4bc6-b57a-016f48546432***
 
-> ***\*\* Also, you can test the API Endpoints using Postman. Here is the API's Postman Collection .json file [Postman Collection file](<Postman Collection of API Endpoints/Image Manipulation API (Laravel).postman_collection.json>) you can download and import in your Postman.***
+> ***\*\* Also, you can test the API Endpoints using Postman. Here is the API's Postman Collection .json file [Postman Collection file](<Postman Collection of API Endpoints/Image Manipulation API (Laravel application).postman_collection.json>) you can download and import in your Postman.***
 
 ## Note:
 
