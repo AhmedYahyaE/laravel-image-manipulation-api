@@ -43,13 +43,13 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 3- Run the '***npm install***' command (and only in case you face any issues/errors, run the 'npm audit fix' command), and then run the '***npm run build***' command.
 
-4- Create a MySQL database named **\`image_manipulation_api\`**, then import the **[image_manipulation_api database SQL Dump File](<Database - yourjob/image_manipulation_api database - SQL Dump File - phpMyAdmin Export.sql>)** into your \`image_manipulation_api\` database.
+4- Create a MySQL database named **\`image_manipulation_api\`**, then import the **[image_manipulation_api database SQL Dump File](<Database - image_manipulation_api/image_manipulation_api database - SQL Dump File - phpMyAdmin Export.sql>)** into your \`image_manipulation_api\` database.
 
 5- Navigate to the **[.env](.env)** file and configure/update it with your MySQL database credentials and other configuration settings.
 
-6- In case the application images are broken (are not loaded), recreate the Symbolic Link between the '[storage/app/public](storage/app/public)' directory and '[public/storage](public/storage)' directory by removing/deleting the [public/storage](public/storage) directory first, then run the '***php artisan storage:link***' command.
+6- Run the '***php artisan serve***' command.
 
-7- Run the '***php artisan serve***' command, and then open your browser and visit **http://127.0.0.1:8000** to access YourJob application.
+7- To get an access token to be able to use the API, open your browser and visit **http://127.0.0.1:8000** to access Image Manipulation API application, then click on Register, then after completing the registration process, click on 'Create new token' to get a new access token, then give a name to your new access token, then click on 'Generate', then copy your new access token to paste in your HTTP Client (like Postman).
 
 \*\* Ready-to-use registered accounts credentials you can use to log in:
 > Email: **ahmed.yahya@example.com**, Password: **123456**
