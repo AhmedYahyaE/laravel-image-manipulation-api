@@ -169,4 +169,4 @@ Example: POST /api/v1/image/resize?w=100&h=120
 - Enter your album ID as follows (optional, not required): Click on the 'Body' tab, then click on 'form-data'. In the 'Key' field, enter 'album_id', then in the 'Value' field, enter your album ID number that you want to associate your image with.
 
 ## Contribution:
-Contributions to my Image Manipulation API Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
+Contributions to my Image Manipulation REST API Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
