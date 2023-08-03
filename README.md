@@ -51,7 +51,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 7- To get an access token to be able to use the API, open your browser and visit **http://127.0.0.1:8000** to access Image Manipulation API application, then click on Register, then after completing the registration process, click on 'Create new token' to get a new access token, then give a name to the token, then click on 'Generate', then copy your new access token to paste it in your HTTP Client (like Postman).
 
-\*\* Ready-to-use registered accounts credentials you can use to log in:
+\*\* Here are the credentials for a ready-to-use registered account that you can use to log in:
 > Email: **ahmed.yahya@example.com**, Password: **123456**
 
 8- Open your HTTP Client such as Postman, create a new Collection, name it 'Image Manipulation API'. Click on your Imgae Manipulation API Collection, then go to 'Variables' tab, then create a variable with the value of the Access Token that you've copied when you registered your account, then click 'Save'. Go to 'Authorization' tab, the in the 'Type' drop-down menu, choose 'Bearer Token'. This way you can inherit this Access token in All your requests to the API in this Collection.
