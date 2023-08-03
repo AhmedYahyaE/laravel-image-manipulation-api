@@ -121,5 +121,27 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 - {album_id} must be provided in the URL.
 
+**9- Delete an image (that belongs to the authenticated/logged-in user) (DELETE):**
+
+**DELETE /api/v1/image/{image_id}**
+
+- {image_id} must be provided in the URL.
+
+**10- Resize an image By URL with percentages % (POST):**
+
+**POST /api/v1/image/resize?w={width_percentage}%&h={height_percentage}%**
+
+Example: POST /api/v1/image/resize?w=50%&h=70%
+
+- 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
+
+**11- Resize an image By URL with px (POST):**
+
+**POST /api/v1/image/resize?w={width_by_px}&h={height_by_px}**
+
+Example: POST /api/v1/image/resize?w=100&h=120
+
+- 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
+
 ## Contribution:
 Contributions to my Image Manipulation API Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
