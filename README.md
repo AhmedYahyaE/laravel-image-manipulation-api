@@ -58,7 +58,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 9- Add your first request, then go to 'Authorization' tab, click on 'Inherit auth from parent'.
 
-10- In your request, go to 'Headers', add two headers: 'Accept': 'application/json' and 'Content-Type': 'application/json'.
+10- In your request, go to the 'Headers' tab, add two headers: 'Accept': 'application/json' and 'Content-Type': 'application/json'.
 
 > ***\*\* Check the API Collection on my Postman Profile: https://www.postman.com/ahmed-yahya/workspace/my-public-portfolio-postman-workspace/collection/28181483-12ef8a00-7826-4bc6-b57a-016f48546432***
 
