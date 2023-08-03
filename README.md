@@ -68,7 +68,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 > For **ALL** your requests to the Image Manipulation API, you must add the following three Headers:
 > 
->     a- 'Authorization' Header with the value of the Access Token you have obtained when you registered your account. The Access Token type is 'Bearer Token' so the Access Token value of the 'Authorization' Header must have the following format: 'Bearer xxxxxxxxxxxxxxxxxxx'. Example: Bearer 15|9BwhVAKORFQxbREqeeY8SPZTmrdWZ2382iNhBoPF
+>     a- 'Authorization' Header with the value of the Access Token you have obtained when you registered your account. The type of the Access Token is 'Bearer Token', so the Access Token value of the 'Authorization' Header must have the following format: 'Bearer xxxxxxxxxxxxxxxxxxx'. Example: Bearer 15|9BwhVAKORFQxbREqeeY8SPZTmrdWZ2382iNhBoPF
 >
 >     b- 'Accept' Header with the value of 'application/json'.
 >
