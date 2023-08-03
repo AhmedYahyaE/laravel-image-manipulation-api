@@ -32,7 +32,7 @@ The Image Manipulation API is a Laravel application that provides a fast and sec
 
 8- Route Model Binding.
 
-## Application Routes:
+## Application Routes and API Endpoints:
 All the application routes and API Endpoints are defined in both ***[web.php](routes/web.php)*** (registration and login routes to get an acess token) and ***[api.php](routes/api.php)*** (API endpoints) files.
 
 ## Installation & Configuration:
@@ -60,12 +60,14 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 10- In your request, go to 'Headers', add two headers: 'Accept': 'application/json' and 'Content-Type': 'application/json'.
 
-> **Note: For ***ALL*** your requests to the Image Manipulation API, you must add the following three Headers:
+## Note:
+
+> For ***ALL*** your requests to the Image Manipulation API, you must add the following three Headers:
 > 
 > a- 'Authorization' Header with the value of the Access Token you've obtained when you registered your account.
 >
 > b- 'Accept' Header with the value of 'application/json'.
-
+>
 > c- 'Content-Type' Header with the value of 'application/json'.
 
 ## API Endpoints:
