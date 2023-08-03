@@ -90,20 +90,20 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 **GET /api/v1/album/{album_id}**
 
-- {album_id} must be provided in the URL.
+- {album_id} must be provided as a URL Parameter.
 
 **4- Update an album (that belongs to the authenticated/logged-in user) (PUT):**
 
 **PUT /api/v1/album/{album_id}**
 
-- {album_id} must be provided in the URL.
+- {album_id} must be provided as a URL Parameter.
 - "name" key, which is your updated album name, must be provided in your JSON HTTP Request body.
 
 **5- Delete an album (that belongs to the authenticated/logged-in user) (DELETE):**
 
 **DELETE /api/v1/album/{album_id}**
 
-- {album_id} must be provided in the URL.
+- {album_id} must be provided as a URL Parameter.
 
 **6- Get All images (that ONLY belong to the authenticated/logged-in user) (GET):**
 
@@ -113,19 +113,19 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 **GET /api/v1/image/{image_id}**
 
-- {image_id} must be provided in the URL.
+- {image_id} must be provided as a URL Parameter.
 
 **8- Get images By Album (that belong to the authenticated/logged-in user) (GET):**
 
 **GET /api/v1/image/by-album/{album_id}**
 
-- {album_id} must be provided in the URL.
+- {album_id} must be provided as a URL Parameter.
 
 **9- Delete an image (that belongs to the authenticated/logged-in user) (DELETE):**
 
 **DELETE /api/v1/image/{image_id}**
 
-- {image_id} must be provided in the URL.
+- {image_id} must be provided as a URL Parameter.
 
 **10- Resize an image By URL with percentages % (POST):**
 
