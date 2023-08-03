@@ -129,19 +129,32 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 **10- Resize an image By URL with percentages % (POST):**
 
-**POST /api/v1/image/resize?w={width_percentage}%&h={height_percentage}%**
+**POST /api/v1/image/resize?w={number}%&h={number}%**
 
 Example: POST /api/v1/image/resize?w=50%&h=70%
 
 - 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
+- "image" key with the value of the URL/link of your image must be provided in your request's JSON body.
+- "album_id" key with the value of the album ID that you want to associate your image with can be optionally (not required) provided in your request's JSON body.
 
 **11- Resize an image By URL with px (POST):**
 
-**POST /api/v1/image/resize?w={width_by_px}&h={height_by_px}**
+**POST /api/v1/image/resize?w={number}&h={number}**
 
 Example: POST /api/v1/image/resize?w=100&h=120
 
 - 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
+- "image" key with the value of the URL/link of your image must be provided in your request's JSON body.
+- "album_id" key with the value of the album ID that you want to associate your image with can be optionally (not required) provided in your request's JSON body.
+
+**12- Resize an image By Upload with percentages % (POST):**
+
+**POST /api/v1/image/resize?w={number}%&h={number}%**
+
+Example: POST /api/v1/image/resize?w=50%&h=70%
+
+- 'w' (width) query string parameter is required, 'h' (height) query string parameter is optional.
+- Upload your image as follows: click on 'Body' tab, then click on 'form-data'. In the 'Key' field, write in 'image' and then click on the drop-down menu of the 'image' Key field and change 'Text' to 'File', then in the 'Value' field, select your image to be uploaded.
 
 ## Contribution:
 Contributions to my Image Manipulation API Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
