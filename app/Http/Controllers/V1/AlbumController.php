@@ -18,7 +18,7 @@ class AlbumController extends Controller
     public function index(Request $request) // Get all albums of the authenticated/logged-in user
     {
         // Note: The Resource collection() method wraps your response in a 'data' key. Data Wrapping: https://laravel.com/docs/9.x/eloquent-resources#data-wrapping
-        return \App\Http\Resources\V1\AlbumResource::collection(\App\Models\Album::where('user_id', $request->user()->id)->paginate()); // Return all albums (that belong to the authenticated/logged-in user ONLY)
+        return \App\Http\Resources\V1\AlbumResource::collection(\App\Models\Album::where('user_id', $request->user()->id)->paginate()); // Return all albums (that ONLY belong to the authenticated/logged-in user)
     }
 
     /**
@@ -74,6 +74,8 @@ class AlbumController extends Controller
         if ($request->user()->id != $album->user_id) { // if the currently authenticated user is not the owner of the album, the user is unauthorized to update that album    
             return abort(403, 'Unauthorized'); // '403' HTTP status code means 'Forbidden'
         }
+
+        // dd($request->all());
 
         $album->update($request->all());
 

@@ -20,7 +20,7 @@ class ImageManipulationController extends Controller
     public function index(Request $request) // Get ALL images (of the authenticated/logged-in user)
     {
         // Note: The Resource collection() method wraps your response in a 'data' key. Data Wrapping: https://laravel.com/docs/9.x/eloquent-resources#data-wrapping
-        return \App\Http\Resources\V1\ImageManipulationResource::collection(\App\Models\ImageManipulation::where('user_id', $request->user()->id)->paginate()); // Return all albums (that belong to the authenticated/logged-in user ONLY)
+        return \App\Http\Resources\V1\ImageManipulationResource::collection(\App\Models\ImageManipulation::where('user_id', $request->user()->id)->paginate()); // Return all albums (that ONLY belong to the authenticated/logged-in user)
     }
 
 

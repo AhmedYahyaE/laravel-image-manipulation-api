@@ -36,10 +36,10 @@ Route::middleware('auth:sanctum')->group(function() { // Our Sanctum Authenticat
         Route::apiResource('album', \App\Http\Controllers\V1\AlbumController::class); // All the album routes (create an album (POST), get all albums (of the authenticated/logged-in user) (GET), get a single album (of the authenticated/logged-in user) (GET), update an album (PUT/PATCH), delete an album (DELETE), ...)    // Note: The apiResource() function: With API routes, routes that generate HTML like create() method (which renders the create HTML Form) and edit() method (which renders the edit/update HTML Form) are not need, because APIs return JSON only. The apiResource() method is used to automatically exclude these two routes. The apiResource() function automatically generate the following routes:     GET /users - index() - List all users     ,     POST /users - store() - Create a new user     ,     GET /users/{user} - show() - Retrieve a specific user     ,     PUT /users/{user} - update() - Update a specific user     ,     DELETE /users/{user} - destroy() - Delete a specific user
 
         // ImageManipulationController
-        Route::get('image', [\App\Http\Controllers\V1\ImageManipulationController::class, 'index']); // Get all images (that belong to the authenticated/logged-in user ONLY)
-        Route::get('image/by-album/{album}', [\App\Http\Controllers\V1\ImageManipulationController::class, 'byAlbum']); // Get image by album (that belong to the authenticated/logged-in user ONLY)
-        Route::get('image/{image}', [\App\Http\Controllers\V1\ImageManipulationController::class, 'show']); // Get a Single image (that belongs to the authenticated/logged-in user ONLY)
+        Route::get('image', [\App\Http\Controllers\V1\ImageManipulationController::class, 'index']); // Get all images (that ONLY belong to the authenticated/logged-in user)
+        Route::get('image/by-album/{album}', [\App\Http\Controllers\V1\ImageManipulationController::class, 'byAlbum']); // Get image by album (that ONLY belongs to the authenticated/logged-in user)
+        Route::get('image/{image}', [\App\Http\Controllers\V1\ImageManipulationController::class, 'show']); // Get a Single image (that ONLY belongs to the authenticated/logged-in user)
         Route::post('image/resize', [\App\Http\Controllers\V1\ImageManipulationController::class, 'resize']); // resize an image (whether By URL or image upload, and whether by px or %)
-        Route::delete('image/{image}', [\App\Http\Controllers\V1\ImageManipulationController::class, 'destroy']); // delete an image (that belongs to the authenticated/logged-in user ONLY)
+        Route::delete('image/{image}', [\App\Http\Controllers\V1\ImageManipulationController::class, 'destroy']); // delete an image (that ONLY belongs to the authenticated/logged-in user)
     });
 });
