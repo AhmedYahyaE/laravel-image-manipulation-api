@@ -49,7 +49,7 @@ All the application routes and API Endpoints are defined in both ***[web.php](ro
 
 6- Run the '***php artisan serve***' command.
 
-7- To get an access token to be able to use the API, open your browser and visit **http://127.0.0.1:8000** to access Image Manipulation API application, then click on Register, then after completing the registration process, click on 'Create new token' to get a new access token, then give a name to your new access token, then click on 'Generate', then copy your new access token to paste in your HTTP Client (like Postman).
+7- To get an access token to be able to use the API, open your browser and visit **http://127.0.0.1:8000** to access Image Manipulation API application, then click on Register, then after completing the registration process, click on 'Create new token' to get a new access token, then give a name to the access token, then click on 'Generate', then copy your new access token to paste it in your HTTP Client (like Postman).
 
 \*\* Ready-to-use registered accounts credentials you can use to log in:
 > Email: **ahmed.yahya@example.com**, Password: **123456**
