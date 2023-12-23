@@ -8,6 +8,8 @@ use App\Http\Requests\UpdateAlbumRequest;
 use App\Models\Album;
 use Illuminate\Http\Request;
 
+use App\Http\Resources\V1\AlbumResource;
+
 class AlbumController extends Controller
 {
     /**
@@ -18,7 +20,7 @@ class AlbumController extends Controller
     public function index(Request $request) // Get all albums of the authenticated/logged-in user
     {
         // Note: The Resource collection() method wraps your response in a 'data' key. Data Wrapping: https://laravel.com/docs/9.x/eloquent-resources#data-wrapping
-        return \App\Http\Resources\V1\AlbumResource::collection(\App\Models\Album::where('user_id', $request->user()->id)->paginate()); // Return all albums (that ONLY belong to the authenticated/logged-in user)
+        return AlbumResource::collection(Album::where('user_id', $request->user()->id)->paginate()); // Return all albums (that ONLY belong to the authenticated/logged-in user)
     }
 
     /**
@@ -41,7 +43,7 @@ class AlbumController extends Controller
         // return $album;
 
         // Using AlbumResource.php (instead of    return $album;    )
-        return new \App\Http\Resources\V1\AlbumResource($album); // We return the newly created album to the user
+        return new AlbumResource($album); // We return the newly created album to the user
     }
 
     /**
@@ -57,7 +59,7 @@ class AlbumController extends Controller
         }
 
 
-        return new \App\Http\Resources\V1\AlbumResource($album); // We return the album to the user
+        return new AlbumResource($album); // We return the album to the user
     }
 
     /**
@@ -80,7 +82,7 @@ class AlbumController extends Controller
         $album->update($request->all());
 
 
-        return new \App\Http\Resources\V1\AlbumResource($album); // We return the album after being updated to the user
+        return new AlbumResource($album); // We return the album after being updated to the user
     }
 
     /**

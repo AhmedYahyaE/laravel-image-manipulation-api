@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\ImageManipulation;
 use App\Http\Requests\ResizeImageRequest;
 use Illuminate\Http\Request;
+use App\Models\Album;
+use App\Http\Resources\V1\ImageManipulationResource;
 // use App\Http\Requests\UpdateImageManipulationRequest; // We deleted this class as we won't have this UPDATE feature in our API
 
 
@@ -20,13 +22,13 @@ class ImageManipulationController extends Controller
     public function index(Request $request) // Get ALL images (of the authenticated/logged-in user)
     {
         // Note: The Resource collection() method wraps your response in a 'data' key. Data Wrapping: https://laravel.com/docs/9.x/eloquent-resources#data-wrapping
-        return \App\Http\Resources\V1\ImageManipulationResource::collection(\App\Models\ImageManipulation::where('user_id', $request->user()->id)->paginate()); // Return all albums (that ONLY belong to the authenticated/logged-in user)
+        return ImageManipulationResource::collection(ImageManipulation::where('user_id', $request->user()->id)->paginate()); // Return all albums (that ONLY belong to the authenticated/logged-in user)
     }
 
 
 
     // Get images by album (of the authenticated/logged-in user)
-    public function byAlbum(Request $request, \App\Models\Album $album) {
+    public function byAlbum(Request $request, Album $album) {
         if ($request->user()->id != $album->user_id) { // if the currently authenticated user is not the owner of the album in the URL, the user is unauthorized to show that album's images
             return abort(403, 'Unauthorized'); // '403' HTTP status code means 'Forbidden'
         }
@@ -34,7 +36,7 @@ class ImageManipulationController extends Controller
         $where = [
             'album_id' => $album->id,
         ];
-        return \App\Http\Resources\V1\ImageManipulationResource::collection(\App\Models\ImageManipulation::where($where)->paginate()); // We return the album images that belong to the authenticated/logged-in user
+        return ImageManipulationResource::collection(ImageManipulation::where($where)->paginate()); // We return the album images that belong to the authenticated/logged-in user
     }
 
 
@@ -59,14 +61,14 @@ class ImageManipulationController extends Controller
         // $data array is the data that we're going to save in the `image_manipulations` database table (at the end of this method)
         $data = [
             // table column names => data to be saved in the table
-            'type'    => \App\Models\ImageManipulation::TYPE_RESIZE, // the constant that we created in ImageManipulation.php model
+            'type'    => ImageManipulation::TYPE_RESIZE, // the constant that we created in ImageManipulation.php model
             'data'    => json_encode($all), // save the whole data in `data` column as JSON format
             'user_id' => $request->user()->id, // `user_id` is the authenticated/logged-in user `id`
         ];
 
         // Since 'album_id' is OPTIONAL, if user submits an 'album_id' key in their HTTP Request Body (JSON Body in Postman if the image is a URL, or form-data Body in Postman if the image is an uploaded file) along with the image's physical file (in form-data Body in Postman) or URL (in JSON Body in Postman), we need to check if that 'album_id' belongs to the authenticated/logged-in user
         if (isset($all['album_id'])) { // if an 'album_id' key is submitted by the user in their HTTP Request Body (JSON Body in Postman if the image is a URL, or form-data Body in Postman if the image is an uploaded file) along with the image's physical file (in form-data Body in Postman) or URL (in JSON Body in Postman), append that 'album_id' to the $data array
-            $album = \App\Models\Album::find($all['album_id']);
+            $album = Album::find($all['album_id']);
             if ($request->user()->id != $album->user_id) { // if the currently authenticated/logged-in user is not the owner of that album, they aren't authorized to resize that image of that album that doesn't belong to them
                 return abort(403, 'Unauthorized'); // '403' HTTP status code means 'Forbidden'
             }
@@ -144,10 +146,10 @@ class ImageManipulationController extends Controller
 
         $data['output_path'] = $dir . $resizedFilename; // Append the resized image path to the $data array to store it in the `output_path` column in `image_manipulations` database table
 
-        $imageManipulation = \App\Models\ImageManipulation::create($data); // INSERT $data array into `image_manipulations` database table    // Note: The create() method returns an instance of the inserted instance (data) in model / database table. This can be done by assigning the create() method to a variable e.g. $flight = Flight::create([ 'name' => 'London to Paris' ]);     where $flight variable is the newly created instance. Check https://laravel.com/docs/9.x/eloquent#mass-assignment:~:text=single%20PHP%20statement.-,The%20inserted%20model%20instance%20will%20be%20returned%20to%20you%20by%20the,-create    AND    https://laravel.com/docs/9.x/eloquent-relationships#the-create-method:~:text=The%20newly%20created,method
+        $imageManipulation = ImageManipulation::create($data); // INSERT $data array into `image_manipulations` database table    // Note: The create() method returns an instance of the inserted instance (data) in model / database table. This can be done by assigning the create() method to a variable e.g. $flight = Flight::create([ 'name' => 'London to Paris' ]);     where $flight variable is the newly created instance. Check https://laravel.com/docs/9.x/eloquent#mass-assignment:~:text=single%20PHP%20statement.-,The%20inserted%20model%20instance%20will%20be%20returned%20to%20you%20by%20the,-create    AND    https://laravel.com/docs/9.x/eloquent-relationships#the-create-method:~:text=The%20newly%20created,method
 
 
-        return new \App\Http\Resources\V1\ImageManipulationResource($imageManipulation); // We return the newly resized image to the user
+        return new ImageManipulationResource($imageManipulation); // We return the newly resized image to the user
     }
 
     /**
@@ -163,7 +165,7 @@ class ImageManipulationController extends Controller
         }
 
 
-        return new \App\Http\Resources\V1\ImageManipulationResource($image);
+        return new ImageManipulationResource($image);
     }
 
     /**
